@@ -1,17 +1,18 @@
 let classNames = [
-    'header', 'menu', 'menu-item', 'menu-item', 'footer', 'menu', 'link', 'link', 'link'
+    'header', 'menu', 'menu-item', 'menu-item', 'footer', 'menu', 'link', 'menu-item', 'link', 'link', 'link'
 ]; // ['link', 'menu-item', 'menu', 'header', 'footer'];
 
 let classNamesCount = {};
 
 for (let i = 0; i < classNames.length; i++) {
-
-    if (classNamesCount[classNames]) {
-        classNamesCount[classNames] += 1;
+    let current = classNames[i];
+    
+    if (classNamesCount[current]) {
+        classNamesCount[current] += 1;
     } else {
-        classNamesCount[classNames] = 1;
+        classNamesCount[current] = 1;
     };
 };
 
-let result = Object.keys(classNamesCount).sort((a,b) => classNamesCount[a] - classNamesCount[b]);
+let result = Object.keys(classNamesCount).sort((a,b) => classNamesCount[b] - classNamesCount[a]);
 console.log(result);
