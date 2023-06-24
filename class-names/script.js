@@ -1,18 +1,25 @@
-let classNames = [
+let classNamesArr = [
     'header', 'menu', 'menu-item', 'menu-item', 'footer', 'menu', 'link', 'menu-item', 'link', 'link', 'link'
-]; // ['link', 'menu-item', 'menu', 'header', 'footer'];
+];
 
-let classNamesCount = {};
+function classNames () {
+    const classNamesCount = {};
 
-for (let i = 0; i < classNames.length; i++) {
-    let current = classNames[i];
-    
-    if (classNamesCount[current]) {
-        classNamesCount[current] += 1;
-    } else {
-        classNamesCount[current] = 1;
-    };
+    for (let i = 0; i < classNamesArr.length; i++) {
+        const current = classNamesArr[i]
+
+        if (classNamesCount[current]) {
+            classNamesCount[current] += 1;
+        } else {
+            classNamesCount[current] = 1;
+        }
+    }
+
+    const result = Object.keys(classNamesCount).sort((a,b) => {
+        return classNamesCount[b] - classNamesCount[a];
+    });
+    return result;
 };
 
-let result = Object.keys(classNamesCount).sort((a,b) => classNamesCount[b] - classNamesCount[a]);
-console.log(result);
+const result = classNames(classNamesArr);
+console.log(result);// ['link', 'menu-item', 'menu', 'header', 'footer'];
