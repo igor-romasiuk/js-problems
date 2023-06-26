@@ -1,3 +1,5 @@
+//Write a function that takes an array of nested arrays and unpack it into the resulting flat array. The result should be a new one-dimensional array.
+
 function flatten(array) {
     const res = [];
 
@@ -34,4 +36,3 @@ function flatten2(array) {
 }
 
 console.log(flatten2([[1], [[2, 3]], [[[4]]]])); // -> [1, 2, 3, 4]
-
