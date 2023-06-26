@@ -1,10 +1,22 @@
-//Напишите функцию, которая определяет уникальны ли все символы в строке. Регистр должен учитываться: ‘a’ и ‘A’ разные символы.
+// Write a function that determines if all characters in a string are unique. Case must be respected: "a" and "A" are different characters.
+
+function isUnique2(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str.indexOf(str[i]) !== i) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(isUnique2('aAbcdefa')); //False
+console.log(isUnique2('aAbcdef')); //True
 
 function isUnique(str) {
     const charSet = new Set();
 
-    for (let i = 0; i < str.toLowerCase().length; i++) {
-        
+    for (let i = 0; i < str.length; i++) {
         const current = str[i];
 
         if (charSet.has(current)) {
@@ -14,6 +26,8 @@ function isUnique(str) {
     }
 
    return true;
+   
 }
 
-console.log(isUnique('aAabcdef')); //False
+console.log(isUnique('aAbcdefa')); //False
+console.log(isUnique('aAbcdef')); //True
