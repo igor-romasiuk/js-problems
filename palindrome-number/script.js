@@ -24,7 +24,7 @@ const isPalindromeNumber = function(num) {
     return num === reverce || num === Math.trunc(reverce / 10);
 };
 
-console.log(isPalindromeNumber(input1));// true
-console.log(isPalindromeNumber(input2));// false
-console.log(isPalindromeNumber(input3));// false
-console.log(isPalindromeNumber(input4));// true
+console.log(isPalindromeNumber(input1)); // true
+console.log(isPalindromeNumber(input2)); // false
+console.log(isPalindromeNumber(input3)); // false
+console.log(isPalindromeNumber(input4)); // true
