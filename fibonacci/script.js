@@ -5,8 +5,8 @@ function fibonacci(num) {
     let result = [0, 1];
 
     for (let i = 2; i <= num; i++) {
-        const prevNum1 = result[i -1];
-        const prevNum2 = result[i -2];
+        const prevNum1 = result[i - 1];
+        const prevNum2 = result[i - 2];
 
         result.push(prevNum1 + prevNum2);
     }
@@ -14,7 +14,7 @@ function fibonacci(num) {
     return result[num];
 };
 
-console.log(fibonacci(7));
+console.log(fibonacci(7)); // -> 13
 
 function fibonacci2(num) {
     if (num <= 0) {
@@ -24,11 +24,11 @@ function fibonacci2(num) {
     } else if (num === 2) {
         return [0, 1];
     } else {
-        const sequence = fibonacci(num - 1);
+        const sequence = fibonacci2(num - 1);
         sequence.push(sequence[num - 2] + sequence[num - 3]);
     }
 
     return sequence;
 }
 
-console.log(fibonacci(7));
+console.log(fibonacci(7)); // -> 13
