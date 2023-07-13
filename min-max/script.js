@@ -7,7 +7,7 @@ function minMax(...array) {
     return [minValue, maxValue];
 }
 
-console.log(minMax(1,2,3,4,5,54));// [ 1, 54 ]
+console.log(minMax(1,2,3,4,5,54)); // [ 1, 54 ]
 
 function minMax2(...array) {
     let minValue = Infinity;
@@ -24,4 +24,4 @@ function minMax2(...array) {
     return [minValue, maxValue];
 }
 
-console.log(minMax2(1,2,3,4,5,54));// [ 1, 54 ]
+console.log(minMax2(1,2,3,4,5,54)); // [ 1, 54 ]
