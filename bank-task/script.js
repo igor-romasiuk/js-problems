@@ -26,4 +26,4 @@ function iWantToGet(ammountRequired) {
     return result;
 }
 
-console.log(iWantToGet(153));
+console.log(iWantToGet(153));// -> [ 100, 50, 1, 1, 1 ]
