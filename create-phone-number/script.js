@@ -1,3 +1,6 @@
+// The task of the createPhoneNumber function is to take an input (which can be a number or a string)
+// and create a formatted phone number if the input is valid.
+
 function createPhoneNumber(num) {
     const numStr = num.toString().replace(/\D/g, '');
 
